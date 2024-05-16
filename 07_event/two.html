@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <h1>chai</h1>
+    <button id="stop">don't click me</button>
+  </body>
+  <script>
+    // setTimeout(()=>{
+    //     console.log("vinay");
+    // },1000)
+
+    const sayVinay = function () {
+      console.log("vinay");
+      document.querySelector("h1").innerHTML = "bast js series";
+    };
+    const changeMe = setTimeout(sayVinay, 5000);
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearTimeout(changeMe);
+    });
+  </script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <h1>js async</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    let Interval;
+    const saydata = () => {
+        console.log(`vinay ${Math.floor(Math.random() * 10 + 1)}`);
+      }
+    
+    document.querySelector("#start").addEventListener("click", () => {
+        Interval = setInterval(saydata, 1000)
+    });
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearInterval(Interval);
+    });
+  </script>
+</html>

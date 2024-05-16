@@ -1,0 +1,108 @@
+document.getElementById('title')
+<h1 id=​"title" class=​"heading">​DOM learning​</h1>​
+
+document.getElementById('title').id
+'title'
+
+document.getElementById('title').class
+undefined
+
+document.getElementById('title').className
+'heading'
+
+document.getElementById('title').getAttribute('id')
+'title'
+
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class', 'test')
+undefined
+
+document.getElementById('title').setAttribute('class', 'test heading')
+undefined
+
+const title = document.getElementById('title')
+undefined
+
+title
+<h1 id=​"title" class=​"test heading">​DOM learning​</h1>​
+
+title.style.backgroundColor = 'red'
+'red'
+
+title.style.padding = '50px'
+'50px'
+
+title.style.borderRadius = '20px'
+'20px'
+
+title.textContent
+'DOM learning test text'
+
+title.innerHTML
+'DOM learning <span style="display: none;">test text</span>'
+
+title.innerText
+'DOM learning'
+
+
+document.querySelector('ul')
+<ul>​…​</ul>​
+
+const myul = document.querySelector('ul')
+undefined
+
+const trungreen = myul.querySelector('li')
+undefined
+
+trungreen.style.backgroundColor = 'green'
+'green'
+
+trungreen.innerText
+'one'
+
+trungreen.innerText = "vinay"
+'vinay'
+
+allLiList
+NodeList(3) [li, li, li]
+
+allLiList.forEach((val)=>{
+    val.style.color = "red"
+})
+
+document.getElementsByClassName('List-item')
+HTMLCollection(4) [li.List-item, li.List-item, li.List-item, li.List-item]0: li.List-item1: li.List-item2: li.List-item3: li.List-itemlength: 4[[Prototype]]: HTMLCollection
+
+const tempclass = document.getElementsByClassName('List-item')
+undefined
+
+tempclass.forEach((li)=>{
+    console.log(li)
+})
+VM9426:1 Uncaught TypeError: tempclass.forEach is not a function
+    at <anonymous>:1:11
+
+    const tempclass = document.getElementsByClassName('List-item')
+undefined
+Array.from(tempclass)
+(4) [li.List-item, li.List-item, li.List-item, li.List-item]0: li.List-item1: li.List-item2: li.List-item3: li.List-itemlength: 4[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()length: 1name: "filter"arguments: (...)caller: (...)[[Prototype]]: ƒ ()[[Scopes]]: Scopes[0]find: ƒ find()length: 1name: "find"arguments: (...)caller: (...)[[Prototype]]: ƒ ()[[Scopes]]: Scopes[0]findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+const myConArr = Array.from(tempclass)
+undefined
+myConArr
+(4) [li.List-item, li.List-item, li.List-item, li.List-item]
+myConArr.for
+undefined
+myConArr.forEach((li)=>{
+    li.style.color = "blue"
+})
+undefined
+myConArr.map((li)=>{
+    li.style.backgroundcolor = "red"
+})
+(4) [undefined, undefined, undefined, undefined]
+myConArr.map((li)=>{
+    li.style.backgroundColor = "red"
+})
+(4) [undefined, undefined, undefined, undefined]

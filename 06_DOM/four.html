@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <ul class="language">
+      <li class="lang">javascript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerText = langName;
+      li.className = "lang";
+      const ul = document.querySelector(".language");
+      ul.appendChild(li);
+    }
+    addLanguage("c++");
+    addLanguage("c");
+    addLanguage("typescript");
+
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptiLanguage("golang");
+
+    const secondLang = document.querySelector("li:nth-child(2)");
+    secondLang.innerHTML = "react.js";
+
+    const newli = document.createElement("li");
+    newli.textContent = "rust";
+    secondLang.replaceWith(newli);
+
+    const firslang = document.querySelector("li:nth-child(1)");
+    firslang.outerHTML = "<li>replit</li>";
+
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+  </script>
+</html>
